@@ -54,10 +54,17 @@ public function login(Request $request)
         'email' => $request->email,
         'password' => $request->password
     ], $request->remember)) {
-        return redirect()->route('home'); // Page d'accueil ou autre
+
+        // Vérification du rôle après l'authentification
+        if (Auth::user()->role === 'admin') {
+            return redirect()->route('admin.dashboard'); // Rediriger vers la page admin
+        }
+
+        return redirect()->route('user.dashboard'); // Rediriger vers la page d'accueil pour les utilisateurs
     }
 
     return back()->withErrors(['email' => 'Identifiants incorrects.']);
 }
+
 
 }
