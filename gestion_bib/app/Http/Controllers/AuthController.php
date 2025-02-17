@@ -27,6 +27,7 @@ public function register(Request $request)
         'name' => $request->name,
         'email' => $request->email,
         'password' => Hash::make($request->password),
+        'role' => 'user',
     ]);
 
     // Authentifier l'utilisateur après l'inscription
