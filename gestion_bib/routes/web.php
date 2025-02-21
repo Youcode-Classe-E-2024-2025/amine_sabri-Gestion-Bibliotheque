@@ -26,3 +26,4 @@ Route::middleware('auth')->group(function () {
     Route::post('/loans/{book}', [LoanController::class, 'store'])->name('loans.store');
     Route::post('/loans/{loan}/return', [LoanController::class, 'returnBook'])->name('loans.return');
 });
+
