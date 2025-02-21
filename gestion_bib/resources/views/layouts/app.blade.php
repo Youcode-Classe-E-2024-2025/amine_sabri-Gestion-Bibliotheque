@@ -45,12 +45,13 @@
 </nav>
 
 <!-- Content -->
- 
+
 <div class="container mx-auto px-4 py-6">
     @yield('content')
 </div>
 
 <!-- JS pour le menu responsive -->
+ 
 <script>
     document.getElementById('menu-btn').addEventListener('click', function() {
         document.getElementById('menu').classList.toggle('hidden');
