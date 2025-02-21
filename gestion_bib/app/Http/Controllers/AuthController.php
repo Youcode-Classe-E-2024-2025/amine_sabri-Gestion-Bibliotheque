@@ -57,14 +57,24 @@ public function login(Request $request)
 
         // Vérification du rôle après l'authentification
         if (Auth::user()->role === 'admin') {
-            return redirect()->route('admin.dashboard'); // Rediriger vers la page admin
+            return redirect()->route('books.index'); // Rediriger vers la page admin
         }
 
-        return redirect()->route('user.dashboard'); // Rediriger vers la page d'accueil pour les utilisateurs
+        return redirect()->route('books.index'); // Rediriger vers la page d'accueil pour les utilisateurs
     }
 
     return back()->withErrors(['email' => 'Identifiants incorrects.']);
 }
 
+public function logout(Request $request)
+{
+    Auth::logout();
+
+    // Invalider la session
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+
+    return redirect()->route('login.form')->with('success', 'Vous avez été déconnecté.');
+}
 
 }
