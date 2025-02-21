@@ -21,7 +21,10 @@
         <ul id="menu" class="hidden md:flex space-x-6">
             @auth
                 <li><a href="{{ route('books.index') }}" class="hover:text-gray-300">Liste des Livres</a></li>
-                <li><a href="{{ route('books.create') }}" class="hover:text-gray-300">Ajouter un Livre</a></li>
+                @if(auth()->check() && auth()->user()->role == "admin")
+                    <li><a href="{{ route('books.create') }}" class="hover:text-gray-300">Ajouter un Livre</a></li>
+                @endif
+                <li><a href="{{ route('loans.index') }}" class="hover:text-gray-300">Livre Reservé</a></li>
                 <li class="text-white-400 border-2 border-white px-5 rounded-md">{{ auth()->user()->name }}</li>
                 <li>
                     <form action="{{ route('logout') }}" method="POST" class="inline">

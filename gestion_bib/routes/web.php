@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\LoanController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,12 @@ Route::get('/user', [UserController::class, 'index'])->name('user.dashboard');
 Route::resource('books', BookController::class);
 
 
+
+Route::middleware('auth')->group(function () {
+    Route::get('/loans', [LoanController::class, 'index'])->name('loans.index');
+    Route::post('/loans/{book}', [LoanController::class, 'store'])->name('loans.store');
+    Route::post('/loans/{loan}/return', [LoanController::class, 'returnBook'])->name('loans.return');
+});
 // Route::get('/home', function () {
 //     return "Bienvenue sur la page d'accueil !";
 // })->name('home');
