@@ -21,11 +21,11 @@
         @foreach($books as $book)
             <div class="bg-white shadow-lg rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105">
                 <img src="{{ $book->image ? asset('storage/' . $book->image) : asset('images/default-book.jpg') }}" 
-                    class="w-full h-48 object-cover" alt="{{ $book->title }}">
+                    class="w-[170px] flex justify-center  h-[250px] ml-[55px] mt-2" alt="{{ $book->title }}">
                 
                 <div class="p-4">
                     <h5 class="text-lg font-semibold text-gray-900 truncate">{{ $book->title }}</h5>
-                    <p class="text-gray-600 text-sm"><strong>Auteur :</strong> {{ $book->author }}</p>
+                    <p class="text-gray-600 text-sm"><strong>By :</strong> {{ $book->author }}</p>
                     <!-- <p class="text-gray-500 text-sm truncate">{{ Str::limit($book->description, 100) }}</p> -->
 
                     <div class="mt-3 flex justify-between items-center">
