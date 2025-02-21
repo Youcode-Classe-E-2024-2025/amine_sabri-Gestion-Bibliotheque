@@ -22,7 +22,7 @@ Une application web de gestion de livres, développée en **Laravel**, permettan
 ## Prérequis
 
 Avant de commencer, assurez-vous d'avoir installé les logiciels suivants :
-
+- [Rapport de Projet](https://docs.google.com/document/d/1zNu_i2_igh0g3WoQZJ07GoKnONMG8Dh3Mi2BMpnqTkU/edit?tab=t.0)
 - [PHP 8.x](https://www.php.net/)
 - [Composer](https://getcomposer.org/)
 - [Laravel](https://laravel.com/)
