@@ -40,12 +40,18 @@
                     </td>
                     <td class="py-3 px-4 text-center">
                         @if(is_null($loan->returned_at))
-                            <form action="{{ route('loans.return', $loan->id) }}" method="POST">
-                                @csrf
-                                <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-1 px-3 rounded shadow">
-                                    Retourner
+                            @if(Auth::user()->role !== 'admin') <!-- Si l'utilisateur n'est pas admin -->
+                                <form action="{{ route('loans.return', $loan->id) }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-1 px-3 rounded shadow">
+                                        Retourner
+                                    </button>
+                                </form>
+                            @else
+                                <button type="button" class="bg-gray-300 text-white font-semibold py-1 px-3 rounded shadow cursor-not-allowed" disabled>
+                                    Désactivé
                                 </button>
-                            </form>
+                            @endif
                         @else
                             <i class="bi bi-check-lg text-xl text-green-500"></i> Retourné
                         @endif
