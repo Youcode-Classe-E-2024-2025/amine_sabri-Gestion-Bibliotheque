@@ -15,12 +15,12 @@
             <thead class="bg-gray-100">
                 <tr>
                     @if(Auth::user()->role === 'admin')
-                        <th class="py-2 px-4 border">Utilisateur</th>
+                        <th class="py-2 px-4 border"><i class="bi bi-person"></i> Utilisateur</th>
                     @endif
-                    <th class="py-2 px-4 border-b text-left">📖 Livre</th>
-                    <th class="py-2 px-4 border-b text-left">📅 Date d'emprunt</th>
-                    <th class="py-2 px-4 border-b text-left">📆 Date de retour</th>
-                    <th class="py-2 px-4 border-b text-center">🔄 Action</th>
+                    <th class="py-2 px-4 border-b text-left"><i class="bi bi-book"></i> Livre</th>
+                    <th class="py-2 px-4 border-b text-left"><i class="bi bi-calendar-check"></i> Date d'emprunt</th>
+                    <th class="py-2 px-4 border-b text-left"><i class="bi bi-calendar-date"></i> Date de retour</th>
+                    <th class="py-2 px-4 border-b text-center"><i class="bi bi-disc"></i> Action</th>
                 </tr>
             </thead>
             <tbody>
