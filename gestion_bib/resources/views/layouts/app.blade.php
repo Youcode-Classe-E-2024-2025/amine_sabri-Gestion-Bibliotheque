@@ -51,7 +51,7 @@
 </div>
 
 <!-- JS pour le menu responsive -->
- 
+
 <script>
     document.getElementById('menu-btn').addEventListener('click', function() {
         document.getElementById('menu').classList.toggle('hidden');
@@ -59,4 +59,5 @@
 </script>
 
 </body>
+
 </html>
