@@ -12,7 +12,7 @@
 <!-- Navbar -->
 <nav class="bg-gray-900 text-white">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="{{ route('books.index') }}" class="text-xl font-bold"><i class="bi bi-book-half"></i> Gestion de Livres</a>
+        <a href="{{ route('books.index') }}" class="text-xl font-bold"><i class="bi bi-book-half"></i> BookSphere</a>
         
         <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
             <i class="bi bi-list text-2xl"></i>
