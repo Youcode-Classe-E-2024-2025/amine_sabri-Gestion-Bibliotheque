@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mx-auto px-4 py-6">
     <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
-        📚 Liste des Livres
+    <i class="bi bi-book-half mr-2"></i>Liste des Livres
     </h2>
 
     @if(session('success'))

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-4">📚 Mes Emprunts</h2>
+    <h2 class="text-2xl font-bold mb-4"><i class="bi bi-book-half"></i> Mes Emprunts</h2>
     
     @if(session('success'))
         <div class="bg-green-100 text-green-700 p-3 rounded mb-4">
