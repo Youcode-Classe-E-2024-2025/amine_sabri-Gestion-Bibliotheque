@@ -22,9 +22,15 @@
                 <input type="password" name="password" required class="w-full px-4 py-2 border rounded-md mt-1 focus:ring-blue-500 focus:border-blue-500">
             </div>
 
-            <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Se connecter</button>
+            <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Se connecter
+            </button>
         </form>
+
+        <p class="mt-4 text-center text-sm text-gray-600">
+            Pas encore de compte ?
+            <a href="{{ route('register') }}" class="text-blue-600 hover:underline">S'inscrire</a>
+        </p>
     </div>
 </body>
 </html>
-

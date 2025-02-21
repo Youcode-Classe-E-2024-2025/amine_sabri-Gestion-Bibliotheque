@@ -17,7 +17,7 @@
             </div>
         @endif
 
-        <form action="{{ route('register') }}" method="POST" class="space-y-4">
+        <form action="{{ route('register.process') }}" method="POST" class="space-y-4">
             @csrf
 
             <div>
@@ -42,6 +42,11 @@
 
             <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">S'inscrire</button>
         </form>
+
+        <p class="mt-4 text-center text-sm text-gray-600">
+            Déjà un compte ?
+            <a href="{{ route('login.form') }}" class="text-blue-600 hover:underline">Se connecter</a>
+        </p>
     </div>
 
 </body>

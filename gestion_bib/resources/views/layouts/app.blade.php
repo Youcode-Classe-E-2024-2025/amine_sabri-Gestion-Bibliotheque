@@ -38,7 +38,7 @@
                 </li>
             @else
                 <li><a href="{{ route('login.form') }}" class="hover:text-gray-300">Connexion</a></li>
-                <li><a href="{{ route('register.form') }}" class="hover:text-gray-300">S'inscrire</a></li>
+                <li><a href="{{ route('register') }}" class="hover:text-gray-300">S'inscrire</a></li>
             @endauth
         </ul>
     </div>
