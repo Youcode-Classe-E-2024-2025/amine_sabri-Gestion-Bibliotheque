@@ -10,7 +10,7 @@
 <body class="bg-gray-100">
 
 <!-- Navbar -->
- 
+
 <nav class="bg-gray-900 text-white">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
         <a href="{{ route('books.index') }}" class="text-xl font-bold"><i class="bi bi-book-half"></i> BookSphere</a>
@@ -45,6 +45,7 @@
 </nav>
 
 <!-- Content -->
+ 
 <div class="container mx-auto px-4 py-6">
     @yield('content')
 </div>
