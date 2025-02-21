@@ -74,7 +74,7 @@ public function logout(Request $request)
     $request->session()->invalidate();
     $request->session()->regenerateToken();
 
-    return redirect()->route('login.form')->with('success', 'Vous avez été déconnecté.');
+    return redirect()->route('books.index')->with('success', 'Vous avez été déconnecté.');
 }
 
 }
